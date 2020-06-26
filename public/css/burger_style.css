@@ -21,8 +21,25 @@ ul {
 }
 
 li {
-    max-width: 75%;
+    max-width: 85%;
     margin-top:1.5em;
+}
+
+li input {
+    min-width: 60%;
+}
+
+.burger-form {
+    margin: 2em;
+}
+
+.burger-form button {
+    color:white;
+    border: 1px solid white;
+}
+
+.burger-form input {
+    max-width: 50%;
 }
 
 img {

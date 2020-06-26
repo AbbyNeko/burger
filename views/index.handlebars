@@ -11,9 +11,17 @@
         <h2>Burgers on the Table:</h2>
         <ul>
             {{#each burgersOnTable}}
-            <li>{{burger_name}}<button burger_id={{id}}>DEVOUR</button></li>
+            <li><input type="text" placeholder="{{burger_name}}" /><button burger_id={{id}}>DEVOUR</button></li>
             {{/each}}
         </ul>
+                
+        <div class="input-group burger-form">
+        <input type="text" class="form-control" placeholder="New Burger"/>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Add Burger</button>
+        </div>
+        </div>
+
     </div>
 
     <div class="center-graphic col-4 text-center">
