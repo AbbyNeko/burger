@@ -1,5 +1,4 @@
 const connection = require("./connection.js");
-const consoleTable = require("console.table");
 
 // Object Relational Mapper (ORM)
 
@@ -10,7 +9,6 @@ const consoleTable = require("console.table");
 var orm = {
 
   selectAll: function(table, cb) {
-
         let queryString = "SELECT * FROM ??";
         connection.query(queryString, [table], function(err, result) {
             if (err) throw err;

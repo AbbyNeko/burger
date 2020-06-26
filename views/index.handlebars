@@ -1,16 +1,42 @@
-<div class="center-graphic">
-    <h1 class="header">EAT-DA-BURGER</h1>
-    <img src="../public/img/burger-graphic.png" alt="arms holding burger"/>
+
+<div class="row">
+    <div class="col-12">
+        <h1 class="header text-center">EAT-DA-BURGER</h1>
+    </div>
 </div>
 
-<ul class="table-burgers">
-    {{#each burgersOnTable}}
-    <li>{{burgerName}}</li>
-    {{/each}}
-</ul>
+<div class="row">
 
-<ul class="burgers-eaten">
-    {{#each burgersEaten}}
-    <li>{{burgerName}}</li>
-    {{/each}}
-</ul>
+    <div class="burgers col-4">
+        <h2>Burgers on the Table:</h2>
+        <ul>
+            {{#each burgersOnTable}}
+            <li>{{burger_name}}<button burger_id={{id}}>DEVOUR</button></li>
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="center-graphic col-4 text-center">
+        <img src="/img/burger-graphic.jpg" alt="arms holding burger"/>
+    </div>
+
+    <div class="burgers-eaten col-4">
+    <h2>Burgers Devoured:</h2>
+    <ul>
+        {{#each burgersEaten}}
+        <li>{{burger_name}}</li>
+        {{/each}}
+    </ul>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+

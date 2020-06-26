@@ -1,13 +1,29 @@
 body {
-    background: black;
+    background: #101010 !important;
 }
 
-h1 {
-    font-family: 'Holtwood One SC', serif;
-    color:white
+.header {
+    font-family: 'Holtwood One SC', serif !important;
+    color:white !important;
+    margin: 1em !important;
+}
+
+h2 {
+    font-family: 'Holtwood One SC', serif !important;
+    color:white !important;
+    font-size: 1.8em !important;
+    margin: 0.5em !important;
 }
 
 ul {
     font-family: 'Roboto Condensed', sans-serif;
     color: white;
+}
+
+img {
+    max-height: 35em;
+}
+
+button {
+    margin-left: 50px !important;
 }
