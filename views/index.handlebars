@@ -1,0 +1,16 @@
+<div class="center-graphic">
+    <h1 class="header">EAT-DA-BURGER</h1>
+    <img src="../public/img/burger-graphic.png" alt="arms holding burger"/>
+</div>
+
+<ul class="table-burgers">
+    {{#each burgersOnTable}}
+    <li>{{burgerName}}</li>
+    {{/each}}
+</ul>
+
+<ul class="burgers-eaten">
+    {{#each burgersEaten}}
+    <li>{{burgerName}}</li>
+    {{/each}}
+</ul>
