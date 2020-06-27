@@ -10,7 +10,6 @@ body {
 
 h2 {
     font-family: 'Holtwood One SC', serif !important;
-    color:white !important;
     font-size: 1.8em !important;
     margin: 0.5em !important;
 }
@@ -46,6 +45,21 @@ img {
     max-height: 35em;
 }
 
-button {
+li button {
    float:right;
+   border-radius:4px !important;
+   border: white solid 1px !important;
+}
+
+.burgers-eaten h2 {
+    color: #ff2626 !important;
+}
+
+.burgers h2 {
+    color: #ffc528 !important;
+}
+
+.burgers .btn-outline-light:hover {
+    background-color: black !important;
+    color:white;
 }
