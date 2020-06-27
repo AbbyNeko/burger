@@ -4,7 +4,7 @@
 
 The Eat-Da-Burger app adds a new burger, updates the burger name and shows a list of devoured/not-devoured burgers.
 
-These functionalities are created using MySQL, Node, Express, Handlebars and a homemade ORM. It follows an MVC design pattern. Node and MySQL is used to make queries to the burgers table. Handlebars renders the HTML pages and the ORM handles the SQL queries.
+These functionalities are created using MySQL, Node, Express, Handlebars and a homemade ORM. It follows an MVC design pattern. Express is used to create the web app. Node and MySQL is used to make queries to the burgers table. Handlebars renders the HTML pages and the ORM handles the SQL queries.
 
 ### Usage
 
