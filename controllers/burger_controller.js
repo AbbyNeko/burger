@@ -16,5 +16,23 @@ router.get('/', function(req, res) {
 
 });
 
+//Updates burger name
+router.post('/update-burger/:id', function(req, res) {
+
+    burger.updateBurger(req.params.id, req.body.column, req.body.newValue);
+    res.status(200).end();
+
+});
+
+//Adds new burger
+router.post('/add-burger', function(req, res) {
+
+    console.log(req.body);
+    burger.addNewBurger(req.body.burger_name);
+    res.status(200).end();
+
+});
+
+
 
 module.exports = router;

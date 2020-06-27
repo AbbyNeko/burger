@@ -7,6 +7,10 @@ var PORT = process.env.PORT || 8080;
 //use public folder as root
 app.use(express.static("public"));
 
+// Parse request body as JSON
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.engine("handlebars", expHandleBars({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 

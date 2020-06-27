@@ -17,42 +17,22 @@ var orm = {
   },
     updateOne: function(id, table, column, newValue) {
         let queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
+
+        if(newValue === 'true') {
+            newValue = true;
+        }
+        
         connection.query(queryString, [table, column, newValue, id], function(err, result) {
             if (err) throw err;
             console.log("Update was Successful");
-            connection.end()
         });
     },
-    insertOne: function(table, columns, newData) {
-        let queryString = "INSERT INTO ?? (??) VALUES(";
+    insertOne: function(table, column, newData) {
+        let queryString = "INSERT INTO ?? (??) VALUES(?)";
 
-        //Adding on ? value depending on count of columns
-        let first = true;
-        columns.forEach(col => {
-
-            if(first) {
-                queryString += '?';
-                first = false;
-            } else {
-                queryString += ', ?';
-            }
-
-        });
-        queryString += ')';
-        
-        //Added new values to params array
-        let params = [table, columns];
-
-        for(const field in newData) {
-
-           params.push(newData[field]);
-            
-        }
-
-        connection.query(queryString, params, function(err, result) {
+        connection.query(queryString, [table, column, newData], function(err) {
             if (err) throw err;
             console.log(`Successfully added a new record to ${table}`);
-            connection.end();
         });
 
     }

@@ -6,10 +6,11 @@ let Burger = {
         orm.selectAll('burgers', cb);
     },
     updateBurger: function(burgerId, field, newValue) {
+        console.log('new value - '+newValue);
         orm.updateOne(burgerId, 'burgers', field, newValue)
     },
     addNewBurger: function(burgerObj) {
-        orm.insertOne('burgers', ['burger_name', 'devoured'], burgerObj);
+        orm.insertOne('burgers', 'burger_name', burgerObj);
     }
 
 };
