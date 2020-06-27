@@ -47,12 +47,19 @@
 //adds burger to row
 function addBurger(evt) {
 
-    evt.preventDefault();
-    $.post( "/add-burger", {burger_name: $("#new-burger").val() })
-    .done(function() {
-        console.log( "New burger added");
-        location.reload();
-    });
+    if($("#new-burger").val() != '') {
+        evt.preventDefault();
+        $.post( "/add-burger", {burger_name: $("#new-burger").val() })
+        .done(function() {
+            console.log( "New burger added");
+            location.reload();
+        });
+
+    } else {
+
+        alert("Burger Name cannot be blank!");
+
+    }
 
 }
 
@@ -71,12 +78,21 @@ function devourBurger(evt, id) {
 //Update burger name on change
 function updateBurgerName(event, id){
 
-    event.preventDefault();
-    $.post( "/update-burger/"+id, { column: 'burger_name', newValue: $("input[burgerId='"+ id +"']").val() })
-    .done(function() {
-       console.log('updated');
-        location.reload();
-    });
+    if($("input[burgerId='"+ id +"']").val() != '') {
+
+
+        event.preventDefault();
+        $.post( "/update-burger/"+id, { column: 'burger_name', newValue: $("input[burgerId='"+ id +"']").val() })
+        .done(function() {
+        console.log('updated');
+            location.reload();
+        });
+
+    } else {
+
+        alert("Burger Name cannot be blank!");
+
+    }
 
 }
 
