@@ -16,7 +16,7 @@ router.get('/', function(req, res) {
 
 });
 
-//Updates burger name
+//Updates burger name or devoured column
 router.post('/update-burger/:id', function(req, res) {
 
     burger.updateBurger(req.params.id, req.body.column, req.body.newValue);
