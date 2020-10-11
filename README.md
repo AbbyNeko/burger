@@ -8,6 +8,16 @@ These functionalities are created using MySQL, Node, Express, Handlebars and a h
 
 ### Usage
 
-To use the app, the user just needs to add a burger he or she wants to eat using the text input on the left of the screen. After pressing "Add Burger", a new burger entry will be added to the list below it. Pressing the "DEVOUR IT!" button next to it will move your burger to the "Burger Devoured" list on the right.
+To use the app, the user just needs to add a burger he or she wants to eat using the text input on the left of the screen. After pressing "Add Burger", a new burger entry will be added to the list below it. 
+
+![Image of adding burger name to list](../public/img/addBurger.png)
+
+To update the burger name, type in the text box as shown below and click away. The burger name will be automatically updated and the page will refresh.
+
+![Image of adding burger name to list](../public/img/updateBurger.png)
+
+Pressing the "DEVOUR IT!" button next to it will move your burger to the "Burger Devoured" list on the right.
+
+![Image of adding burger name to list](../public/img/devouredBurger.png)
 
 Go to https://enigmatic-hamlet-73997.herokuapp.com/ to try it out! All burger entries will be stored in the database.
