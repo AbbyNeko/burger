@@ -20,4 +20,4 @@ Pressing the "DEVOUR IT!" button next to it will move your burger to the "Burger
 
 <img src="./public/img/devouredBurger.png" alt="devour burger" width="400" height="450"/>
 
-Go to https://enigmatic-hamlet-73997.herokuapp.com/ to try it out! All burger entries will be stored in the database.
+
